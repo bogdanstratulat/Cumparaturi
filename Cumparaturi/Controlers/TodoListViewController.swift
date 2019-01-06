@@ -88,6 +88,7 @@ class TodoListViewController: UITableViewController {
     }
     
     func loadItem() {
+        
         let request: NSFetchRequest<Item> = Item.fetchRequest()
         
         do {
@@ -95,6 +96,7 @@ class TodoListViewController: UITableViewController {
         } catch {
             print(error)
         }
+        tableView.reloadData()
     }
     
 }
@@ -118,4 +120,13 @@ extension TodoListViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItem()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+        
+    }
 }
