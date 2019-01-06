@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class TodoListViewController: UITableViewController {
 
    var itemArray = [Item]()
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("produse.plist")
-
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +42,10 @@ class TodoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-       itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+        //itemArray[indexPath.row].setValue("Completed", forKey: "titile")
+        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
+//        context.delete(itemArray[indexPath.row])
+//        itemArray.remove(at: indexPath.row)
         saveItem()
         
         tableView.reloadData()
@@ -56,8 +60,10 @@ class TodoListViewController: UITableViewController {
         let alert = UIAlertController(title: "Adauga", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Adauga produs", style: .default) { (action) in
             //what happens
-            let newItem = Item()
+           
+            let newItem = Item(context: self.context)
             newItem.title = textFiel.text!
+            newItem.done = false
             self.itemArray.append(newItem)
             self.saveItem()
      
@@ -73,25 +79,22 @@ class TodoListViewController: UITableViewController {
 }
     
     func saveItem() {
-        let encoder = PropertyListEncoder()
         do {
-            let data = try encoder.encode(itemArray)
-            try data.write(to: dataFilePath!)
+            try context.save()
         } catch {
-            print("Error encoding")
+            print("Error saving data \(error)")
         }
         self.tableView.reloadData()
     }
     
     func loadItem() {
-        if let data = try? Data(contentsOf: dataFilePath!){
-            let decoder = PropertyListDecoder()
-            do {
-            itemArray = try decoder.decode([Item].self, from: data)
-            } catch {
-                print ("Error")
-            }
-            }
+        let request: NSFetchRequest<Item> = Item.fetchRequest()
+        
+        do {
+       itemArray = try context.fetch(request)
+        } catch {
+            print(error)
+        }
     }
 }
 
