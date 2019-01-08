@@ -12,11 +12,16 @@
 		7C83501321DF86890007BF11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C83501121DF86890007BF11 /* Main.storyboard */; };
 		7C83501521DF868A0007BF11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C83501421DF868A0007BF11 /* Assets.xcassets */; };
 		7C83501821DF868A0007BF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C83501621DF868A0007BF11 /* LaunchScreen.storyboard */; };
-		7C83502721E0EE5D0007BF11 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7C83502521E0EE5D0007BF11 /* DataModel.xcdatamodeld */; };
 		7C83504C21E24C9C0007BF11 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C83504B21E24C9C0007BF11 /* CategoryViewController.swift */; };
+		7C9D99DF21E39FC700D9A5C3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D99DE21E39FC700D9A5C3 /* Item.swift */; };
+		7C9D99E121E39FEC00D9A5C3 /* Categlrh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9D99E021E39FEC00D9A5C3 /* Categlrh.swift */; };
+		AEFB3355C7191EDB1FE9D01A /* Pods_Cumparaturi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0292ED7CE31156DFCAFC9A85 /* Pods_Cumparaturi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0292ED7CE31156DFCAFC9A85 /* Pods_Cumparaturi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cumparaturi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4E1722C7E26F0BF2699AD6 /* Pods-Cumparaturi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumparaturi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cumparaturi/Pods-Cumparaturi.debug.xcconfig"; sourceTree = "<group>"; };
+		4B5165C7B9D8C23C51687379 /* Pods-Cumparaturi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cumparaturi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cumparaturi/Pods-Cumparaturi.release.xcconfig"; sourceTree = "<group>"; };
 		7C83500A21DF86890007BF11 /* Cumparaturi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cumparaturi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C83500D21DF86890007BF11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C83500F21DF86890007BF11 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
@@ -24,8 +29,9 @@
 		7C83501421DF868A0007BF11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C83501721DF868A0007BF11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C83501921DF868A0007BF11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C83502621E0EE5D0007BF11 /* data model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "data model.xcdatamodel"; sourceTree = "<group>"; };
 		7C83504B21E24C9C0007BF11 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		7C9D99DE21E39FC700D9A5C3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7C9D99E021E39FEC00D9A5C3 /* Categlrh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categlrh.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEFB3355C7191EDB1FE9D01A /* Pods_Cumparaturi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BB4F654D0D20BF66C80264F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0292ED7CE31156DFCAFC9A85 /* Pods_Cumparaturi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7C83500121DF86890007BF11 = {
 			isa = PBXGroup;
 			children = (
 				7C83500C21DF86890007BF11 /* Cumparaturi */,
 				7C83500B21DF86890007BF11 /* Products */,
+				A30ADF2955FF6A4371E005EC /* Pods */,
+				1BB4F654D0D20BF66C80264F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +88,8 @@
 		7C83502121E0AC3E0007BF11 /* Controlers */ = {
 			isa = PBXGroup;
 			children = (
-				7C83500F21DF86890007BF11 /* TodoListViewController.swift */,
 				7C83504B21E24C9C0007BF11 /* CategoryViewController.swift */,
+				7C83500F21DF86890007BF11 /* TodoListViewController.swift */,
 			);
 			path = Controlers;
 			sourceTree = "<group>";
@@ -80,7 +97,8 @@
 		7C83502221E0AC820007BF11 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				7C83502521E0EE5D0007BF11 /* DataModel.xcdatamodeld */,
+				7C9D99E021E39FEC00D9A5C3 /* Categlrh.swift */,
+				7C9D99DE21E39FC700D9A5C3 /* Item.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -102,6 +120,15 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		A30ADF2955FF6A4371E005EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E4E1722C7E26F0BF2699AD6 /* Pods-Cumparaturi.debug.xcconfig */,
+				4B5165C7B9D8C23C51687379 /* Pods-Cumparaturi.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C83501C21DF868A0007BF11 /* Build configuration list for PBXNativeTarget "Cumparaturi" */;
 			buildPhases = (
+				B0728413F43CC7564EDB81A3 /* [CP] Check Pods Manifest.lock */,
 				7C83500621DF86890007BF11 /* Sources */,
 				7C83500721DF86890007BF11 /* Frameworks */,
 				7C83500821DF86890007BF11 /* Resources */,
+				2D81DF6C6A1B08C269F4500E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,14 +197,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D81DF6C6A1B08C269F4500E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Cumparaturi/Pods-Cumparaturi-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cumparaturi/Pods-Cumparaturi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0728413F43CC7564EDB81A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cumparaturi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7C83500621DF86890007BF11 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C9D99DF21E39FC700D9A5C3 /* Item.swift in Sources */,
+				7C9D99E121E39FEC00D9A5C3 /* Categlrh.swift in Sources */,
 				7C83504C21E24C9C0007BF11 /* CategoryViewController.swift in Sources */,
 				7C83501021DF86890007BF11 /* TodoListViewController.swift in Sources */,
-				7C83502721E0EE5D0007BF11 /* DataModel.xcdatamodeld in Sources */,
 				7C83500E21DF86890007BF11 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +399,7 @@
 		};
 		7C83501D21DF868A0007BF11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E4E1722C7E26F0BF2699AD6 /* Pods-Cumparaturi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +418,7 @@
 		};
 		7C83501E21DF868A0007BF11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B5165C7B9D8C23C51687379 /* Pods-Cumparaturi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -376,19 +457,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7C83502521E0EE5D0007BF11 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7C83502621E0EE5D0007BF11 /* data model.xcdatamodel */,
-			);
-			currentVersion = 7C83502621E0EE5D0007BF11 /* data model.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7C83500221DF86890007BF11 /* Project object */;
 }
